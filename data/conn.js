@@ -10,8 +10,9 @@ export default async function getConnection() {
   if (instance == null) {
     try {
       instance = await client.connect();
+      console.log("Conexión exitosa a la base de datos.");
     } catch (error) {
-      console.log(err.message);
+      console.log("Error de conexión:", error.message);
     }
   }
   return instance;

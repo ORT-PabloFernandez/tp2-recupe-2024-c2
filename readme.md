@@ -42,4 +42,36 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 
 ## Listado de endpoint
 
--GET /api/movies?pageSize=[pageSize]&page=[page]
+- GET /api/movies?pageSize=[pageSize]&page=[page]
+    Descripción: Obtiene todas las películas con paginación.
+    Parámetros:
+        pageSize: Tamaño de la página
+        page: Número de la página
+
+- GET /api/movies/id/:id
+    Descripción: Obtiene una película por su ID.
+    Parámetros:
+        id: ID de la película
+  
+ - GET /api/movies/winners
+    Descripción: Obtiene películas que hayan ganado al menos un premio.
+    Parámetros:
+       pageSize: Tamaño de la página
+       page: Número de la página
+         
+ - GET /api/movies/language/:language
+    Descripción: Filtra películas por idioma.
+    Parámetros:
+        language: Idioma de las películas (string).
+        pageSize: Tamaño de la página (entero).
+        page: Número de la página (entero).
+ 
+ - GET /api/movies/ranking
+    Descripción: Devuelve películas ordenadas por el puntaje "fresh" (de mayor a menor).
+
+
+# Este último no pude terminar de probarlo. Puede que me falte algo.
+- GET /api/comments/:userId
+    Descripción: Obtiene los coemntarios de un usuario por su ID.
+    Parámetros:
+        userId: ID del usuario
